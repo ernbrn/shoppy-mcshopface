@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "name": "Cocoa Krispies",
+      "brand": "Kellogg",
+      "price": 300,
+      "quantity": 25
+    },
+    {
+      "name": "Apples",
+      "brand": "Nature",
+      "price": 50,
+      "quantity": 3
+    },
+    {
+      "name": "Eggs",
+      "brand": "Chickens",
+      "price": 500,
+      "quantity": 1
+    },
+    {
+      "name": "Seltzer",
+      "brand": "Kroger",
+      "price": 250,
+      "quantity": 2
+    },
+    {
+      "name": "Coffee",
+      "brand": "Joe Van Gough",
+      "price": 1059,
+      "quantity": 5
+    }
+  ]
+}

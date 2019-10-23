@@ -24,11 +24,29 @@ def close_db(e=None):
         db.close()
 
 
+def seed_groceries(db):
+    with current_app.open_resource('inventory.json') as json_file:
+        groceries = json.loads(json_file.read())['data']
+        for grocery in groceries:
+            db.execute(
+                'INSERT INTO groceries (name, brand, price, quantity) VALUES (?, ?, ?, ?)',
+                (
+                    grocery['name'],
+                    grocery['brand'],
+                    grocery['price'],
+                    grocery['quantity']
+                )
+            )
+            db.commit()
+
+
 def init_db():
     db = get_db()
 
     with current_app.open_resource('schema.sql') as f:
         db.executescript(f.read().decode('utf8'))
+
+    seed_groceries(db)
 
 
 @click.command('init-db')
