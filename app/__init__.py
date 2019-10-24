@@ -37,4 +37,7 @@ def create_app(test_config=None):
     from . import receipt
     app.register_blueprint(receipt.bp)
 
+    from . import reset
+    app.register_blueprint(reset.bp)
+
     return app
