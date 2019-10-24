@@ -28,4 +28,7 @@ def create_app(test_config=None):
     from . import cart
     app.register_blueprint(cart.bp)
 
+    from . import cart_groceries
+    app.register_blueprint(cart_groceries.bp)
+
     return app
